@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FORUM</title>
+  <script src='https://code.jquery.com/jquery-3.1.0.min.js%27%3E'></script>
+  <script type='text/javascript' src='js/script.js'></script>
+  <link rel='stylesheet' type='text/css' href='style.css'>
+  <script type="text/javascript">
+
+function controllaLogin(){
+var user = document.loginform.NomeUtente.value;
+var pwd = document.loginform.Password.value;
+    if(user == "")
+    {
+        alert("username non valorizzato");
+        document.loginform.NomeUtente.focus();
+        return false;
+    }
+
+    if(pwd == "")
+    {
+        alert("password non valorizzata");
+        document.loginform.Password.focus();
+        return false;
+    }
+
+    return true;
+}
+</script>
+</head>
+<body>
+<div id="tuodiv"></div>
+  <!-- Navigation -->
+  <nav>
+    <div class='container'>
+      <div class='login-button'>
+        Login
+      </div>
+    </div>
+  </nav>
+<!-- Login Form -->
+  <div class='login-form'>
+    <div class='container'>
+      <form name ="loginform" action= "login.php" method ="post" onsubmit = "return controllaLogin()">
+        <h4>NomeUtente</h4>
+        <input class='username' name="NomeUtente" AUTOCOMPLETE="Off" placeholder="inserisci username"/>
+        <h4>Password</h4>
+        <input type='password' name= "Password" AUTOCOMPLETE="Off" placeholder="inserisci password"/><br>
+        <a href="registrati.html">Registrati</a><br>
+        <input class='sign-in-button' type='submit' value='Invia' />
+      </form>
+    </div>
+  </div>
+
+      <div class="footer">
+      <center><h5>Progetto Techweb Parthenope</h5></center>
+      </div>
+
+
+   <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script> 
+
+  <script src='js/main.js'></script> 
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<html>
+<head>
+<title> Nuovo Utente </title>
+<script src='https://code.jquery.com/jquery-3.1.0.min.js%27%3E'></script>
+<script type='text/javascript' src='js/script.js'></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+function controllaInput(){
+var password = document.registratiform.Password.value;
+var confpassword = document.registratiform.confpassword.value;
+var nomeutente = document.registratiform.NomeUtente.value;
+
+    if(nomeutente!="")
+    {
+        if(password != confpassword)
+        {
+            alert("le password non coincidono")
+            document.registratiform.Password.focus();
+            return false;
+        }
+    }
+}
+</script>
+</head>
+<body>
+<div id="tuodiv"></div>
+<!-- Navigation -->
+  <nav>
+    <div class='container'>
+      <div class='registrati-button'>
+        Registrati
+      </div>
+    </div>
+  </nav>
+<center>
+<form name ="registratiform" action= "Registrazione.php" method ="post" onsubmit = "return controllaInput()">
+<table border="5" bordercolor="yellow">
+<tr>
+<td>
+<b> Username </b>
+</td>
+<td>
+<input type="text" name = "NomeUtente" maxlenght="30" AUTOCOMPLETE="Off" required> 
+</td>
+</tr>
+<tr>
+<td>
+<b> Password </b>
+</td>
+<td> 
+<input type="password"  name= "Password" maxlenght="30" AUTOCOMPLETE="Off" required>
+</tr>
+<tr>
+<td>
+<b> Conferma Password </b>
+</td>
+<td> 
+<input type="password"  name= "confpassword" maxlenght="30" AUTOCOMPLETE="Off" required>
+</tr>
+<tr>
+<td>
+<b> Email </b>
+</td>
+<td> 
+<input type="email"  name= "email" maxlenght="30" AUTOCOMPLETE="Off" required>
+</tr>
+</TABLE>
+<input type=submit value="invia">
+<input type=reset value="cancella">
+<a href="Index2.html">home</a>
+</center>
+</form>
+</body>
+</html>
